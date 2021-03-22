@@ -34,6 +34,27 @@ def ej1():
       ej: La suma entre 4.2 y 6.5 es 10.7
 
     '''
+    print("Ingrese un número: ")
+    numero_1 = float(input())
+
+    print("Ingrese operador: ")
+    operador = str(input())
+
+    print("Ingrese otro número: ")
+    numero_2 = float(input())
+
+    if operador == "+":
+      print(numero_1 + numero_2)
+    elif operador == "-" :
+      print(numero_1 - numero_2)
+    elif operador == "*" :
+      print(numero_1 * numero_2)
+    elif operador == "/" :
+      print(numero_1 / numero_2)
+    elif operador == "**" :
+      print(numero_1 ** numero_2)
+    else:
+      print("Operador invalido")
 
 
 def ej2():
@@ -55,7 +76,18 @@ def ej2():
       entienda de que se está hablando.
 
     '''
+    print("Ingrese su nombre completo")
+    nombre = input(str())
+    print("Ingrese su DNI")
+    dni = input(int())
 
+    print("Ingrese su edad")
+    edad = input(int())
+    print("Ingrese su altura")
+    altura = input(int())
+
+    print("Nombre Completo: " + nombre + ", DNI: " + dni)
+    print("Nombre Completo: " + nombre + ", Edad: " + edad + ", Altura: " + altura)
 
 def ej3():
     print('Ejercicios de práctica con cadenas')
@@ -89,7 +121,17 @@ def ej3():
     Cualquier duda con el método split pueden consultarla por el campus
 
     '''
-
+    print("Nombre del padre: ")
+    padre_1 = input(str())
+    print("Nombre del otro padre: ")
+    padre_2 = input(str())
+    print("Nombre del hijo: ")
+    hijo = input(str())
+    
+    nombre_1, apellido_1 = padre_1.split(" ")
+    nombre_2, apellido_2 = padre_2.split(" ")
+  
+    print("Nombre completo del hijo: " + hijo + " " + apellido_1 + " " + apellido_2)
 
 def ej4():
     # Ejercicios de práctica con cadenas
@@ -123,6 +165,17 @@ def ej4():
 
     Cualquier duda con el método split pueden consultarla por el campus
     '''
+    print("Nombre completo: ")
+    persona_1 = input(str())
+    print("Nombre completo de la otra persona: ")
+    persona_2 = input(str())
+    
+    nombre, apellido = persona_2.split(" ")
+
+    if apellido in persona_1:
+      print("Ambas personas son parientes")
+    else:
+      print("No son parientes")
 
 
 def ej5():
@@ -149,11 +202,16 @@ def ej5():
 
     Cualquier duda con estos métodos pueden consultarla por el campus
     '''
-
+    print("Ingrese nombre completo: ")
+    nombre_completo = input(str())
+    
+    print(nombre_completo.lower())
+    print(nombre_completo.upper())
+    print(nombre_completo.capitalize())
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
-    ej1()
+    # ej1()
     # ej2()
     # ej3()
     # ej4()
