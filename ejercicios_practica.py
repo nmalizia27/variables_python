@@ -120,7 +120,9 @@ def ej5():
     palabra_2 = str(input())
 
     # De la primera palabra tome las primeras tres letras, utilice el operador :
-    sub_1 = palabra_1[0:2]
+    sub_1 = palabra_1[0:2] # Inovetip: Acá hay que tener cuidado, si usas [0:2] te trae solo las primeras dos letras
+    # porque en [desde:hasta] el "desde" te lo toma desde el cero, pero en "hasta" comienza desde el uno...
+    # cuando es así, te conviene usar [:3]
     sub_2 = palabra_2[-3:]
 
     
